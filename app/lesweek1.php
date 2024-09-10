@@ -12,10 +12,26 @@
 
     <?php
        $voornaam = "Arjan";
+       
+       $tussenvoegsel = "de";
+       
+       $achternaam = "Ruijter";
 
+       $straatnaam = "Julianastraat";
+
+       $huisnummer = "6HS";
+
+       $woonplaats = "Amsterdam";
+
+       echo "<div>";
+             
+       echo "<p>Mijn naam is $voornaam $tussenvoegsel $achternaam</p>"; 
+
+       echo '<p>Mijn naam is ' . $voornaam . ' ' .$tussenvoegsel . ' ' . $achternaam . '</p>';
        
-       
-       echo "<p>Mijn naam is $voornaam</p>"; 
+       echo "<p>Ik woon in de $straatnaam op huisnummer $huisnummer te $woonplaats </p>";
+
+       echo "</div>";
     ?>
 
     <a href="../index.html">terug</a>
