@@ -36,6 +36,35 @@
         $verdrievoudiging = 3;
         $totaalAantalStudenten = $totaalAantalStudenten * $verdrievoudiging;
         // $totaalAantalStudenten *= $verdrievoudiging; 
+        echo "<p>De komende 4 jaar zal het studentenaantal verdrievoudigen naar $totaalAantalStudenten</p>";
+
+        // Je kunt ook delen
+        $halvering = 2;
+        $totaalAantalStudenten = $totaalAantalStudenten / $halvering;
+        // $totaalAantalStudenten /= $halvering;
+        echo "<p>We gaan de helft van de studenten uitschrijven en dan zijn er nog $totaalAantalStudenten over</p>";
+
+        // Hieronder staat een Boolean variabele
+        $ingeschrevenBijMboUtrecht = true;
+
+        if ($ingeschrevenBijMboUtrecht) {
+            echo "<p>Ik ben een ingeschreven studenten van MBO Utrecht</p>"; //op het scherm te zien bij true
+        } else {
+            echo "<p>Ik ben niet ingeschreven bij MBO Utrecht<p>"; //op het scherm te zien bij false
+        }
+
+        //
+        $ikBenMiljonair = 0;
+
+        if ($ikBenMiljonair) {
+            echo "Welkom miljonair u wordt doorgestuurd naar de porsche 9-11 site";
+            header('refresh:3; url=https://www.porsche.com/netherlands/nl/models/911/');
+        } else {
+            echo "Ik ben nog geen miljonair";
+            header('refresh:3; url=https://www.intertoys.nl/SearchDisplay?categoryId=&storeId=11601&catalogId=11051&langId=-1000&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=24&searchTerm=speelgoedauto&authToken=-1002%252CJdh5JVzqovGDGuZIS9A0yAc11LCiDPi1CWNOoTX%252B9xo%253D&_gl=1*fbis04*_up*MQ..*_ga*MjM2MzkzNTU4LjE3MjYyMzY1NDY.*_ga_GHTST6BQ99*MTcyNjIzNjU0NC4xLjAuMTcyNjIzNjU0NC4wLjAuODgxNjczNzI1');
+        }
+
+
 
 
     ?>
