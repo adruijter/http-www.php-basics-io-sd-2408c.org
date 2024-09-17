@@ -53,20 +53,67 @@
             echo "<p>Ik ben niet ingeschreven bij MBO Utrecht<p>"; //op het scherm te zien bij false
         }
 
-        //
-        $ikBenMiljonair = 0;
+        
+        $ikBenMiljonair = true;
 
         if ($ikBenMiljonair) {
-            echo "Welkom miljonair u wordt doorgestuurd naar de porsche 9-11 site";
-            header('refresh:3; url=https://www.porsche.com/netherlands/nl/models/911/');
+            echo "<p>Welkom miljonair u wordt doorgestuurd naar de porsche 9-11 site</p>";
+            // header('refresh:6; url=https://www.porsche.com/netherlands/nl/models/911/');
         } else {
-            echo "Ik ben nog geen miljonair";
-            header('refresh:3; url=https://www.intertoys.nl/SearchDisplay?categoryId=&storeId=11601&catalogId=11051&langId=-1000&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=24&searchTerm=speelgoedauto&authToken=-1002%252CJdh5JVzqovGDGuZIS9A0yAc11LCiDPi1CWNOoTX%252B9xo%253D&_gl=1*fbis04*_up*MQ..*_ga*MjM2MzkzNTU4LjE3MjYyMzY1NDY.*_ga_GHTST6BQ99*MTcyNjIzNjU0NC4xLjAuMTcyNjIzNjU0NC4wLjAuODgxNjczNzI1');
+            echo "<p>Ik ben nog geen miljonair</p>";
+            // header('refresh:6; url=https://www.intertoys.nl/');
         }
 
+
+        // Wanneer je meerdere waarden aan één variabele koppelt heb je een array nodig
+        //                  0          1      2         3          4        5          6
+        $snoep = array('Snickers', 'Mars', 'Twix', 'Milky Way', "M&M's", 'Bounty', 'Nuts');
+        echo "<p>Mijn favoriete snoep is: $snoep[0]</p>";
+        echo "<p>Mijn favoriete snoep is: $snoep[1]</p>";
+        echo "<p>Mijn favoriete snoep is: $snoep[2]</p>";
+        echo "<p>Mijn favoriete snoep is: $snoep[3]</p>";
+        echo "<p>Mijn favoriete snoep is: $snoep[4]</p>";
+        echo "<p>Mijn favoriete snoep is: $snoep[5]</p>";
+        echo "<p>Mijn favoriete snoep is: $snoep[6]</p>";
+
+        foreach ( $snoep as $item) {
+            echo "<p>Mijn favoriet snoep is: $item</p>";
+        }
+
+        /* Maak een array met daarin 10 games die je leuk en zet deze games 
+            in een top tien lijstje met een foreach-loop */
+
+        $games = array(
+                    'Kings Valley', 
+                    'Redux of Time', 
+                    'First Principle', 
+                    'Dr. Dr.', 
+                    'The legend II', 
+                    'Star Wars', 
+                    'Day of independents',
+                    'Last Emperor',
+                    'Take two',
+                    'Enter the Dragon'
+                 );
+        // var_dump($games);
+
+        echo "<p>Mijn top tien lijst van games</p>";
+        echo "<p>==================</p>";
+
+        echo "<ol>";
+        foreach ($games as $item) {
+            echo "<li>$item</li>";
+        }
+        echo "</ol>";
+
+
+
+
+       
 
 
 
     ?>
+
 </body>
 </html>
