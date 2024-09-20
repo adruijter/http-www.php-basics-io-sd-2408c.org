@@ -107,6 +107,78 @@
         echo "</ol>";
 
 
+        /**
+         * Er zijn ook associatieve array's. Geef de onderstaande info weer
+         * met een foreach-loop 
+         */
+
+        $persoon = array(
+            'voornaam' => 'Arjan',
+            'tussenvoegsel' => 'de', 
+            'achternaam' =>'Ruijter'
+        );
+        echo "<p>Mijn voornaam is: {$persoon['voornaam']}</p>";
+
+
+        foreach ($persoon as $key => $value)  {
+            echo "<p>$key: $value</p>";
+        }
+
+
+         /**
+         * Maak een associatief array met daarin je 8 favoriete sneakers inclusief prijs.
+         * Gebruik een foreach-loop en de output moet er als volgt uitzien:
+         * 
+         * Mijn favoriete sneakers
+         * ***********************
+         * Schoen 1: Adidas - 231,45 euro
+         * Schoen 2: ......
+         * enz.....
+         * Schoen 8: Nike - 187,67 euro
+         */
+
+         $sneakers = array(
+            'Nike' => '231',
+            'Adidas' => '245',
+            'Vans' => '234',
+            'Reebok' => '221',
+            'Sketchers' => '232',
+            'Le Coq Sportive' => '453',
+            'Asics' => '342',
+            'All Stars' => '124'
+         );
+
+         arsort($sneakers);
+
+         echo "<p>Mijn favoriete Sneakers</p>";
+         echo "*******************";
+
+         $number = 1;
+         foreach ($sneakers as $shoes => $price) {
+            echo "<p>Schoen $number: $shoes - $price</p>";
+            // $number = $number + 1;
+            $number++;
+            // $number+=1;
+         }
+
+         echo "In het het array sneakers zitten in 
+                totaal " . count($sneakers) . " schoenen met 
+                    een totaalprijs van: " . array_sum($sneakers) . "&euro;";
+
+        /**
+         * Maak een associatief array met daarin de top 5 snelste auto's ter wereld met
+         * de topsnelheid daarin vermeld.Je moet sorteren op naam van de auto alfabetisch 
+         * van a naar z dit moet gebeuren met een array sorteer functie. 
+         * De output ziet er als volgt uit:
+         * 
+         * ====================================
+         * Top 5 snelste sportauto's ter wereld
+         * ====================================
+         * 1. Bugatti Veyron => 456 km/h 
+         * 2. Fiat Diablo    => 234 km/h
+         * 3. ...........
+         * 
+         */
 
 
        
