@@ -161,9 +161,9 @@
             // $number+=1;
          }
 
-         echo "In het het array sneakers zitten in 
+         echo "<p>In het het array sneakers zitten in 
                 totaal " . count($sneakers) . " schoenen met 
-                    een totaalprijs van: " . array_sum($sneakers) . "&euro;";
+                    een totaalprijs van: " . array_sum($sneakers) . "&euro;</p>";
 
         /**
          * Maak een associatief array met daarin de top 5 snelste auto's ter wereld met
@@ -179,6 +179,26 @@
          * 3. ...........
          * 
          */
+
+         $fastestCars = array(
+            'Bugatti Chiron Super Sport 300+' => '490',
+            'SSC Tuatara' => '475',           
+            'Hennessey Venom F5' => '437',
+            'Koenigsegg Jesko Absolut' => '531',
+            'Rimec Nevera' => '415'
+          );
+
+         ksort($fastestCars); 
+
+         echo "===================";
+         echo "<p>Top 5 snelste auto's ter wereld</p>";
+         echo "===================";
+
+         $getal = 1;
+         foreach ($fastestCars as $carname => $speed) {
+            echo "<p>$getal. $carname => $speed km/u</p>";
+            $getal++;
+         }
 
 
        
