@@ -53,6 +53,39 @@
           * De som van 9 + 7 = 16
           * De som van 4 + 2 = 6
           */
+
+          function berekenSom($getal1, $getal2) 
+          {
+                $som = $getal1 + $getal2;
+                echo "<p>De som van $getal1 + $getal2 = $som</p>";
+          }
+
+          berekenSom(3, 4);
+          berekenSom(9, 7);
+          berekenSom(4, 2);
+
+          /**
+           * Maak een associatief array met twee getallen als sleutel waarde paar. Het array
+           * heeft in totaal tien van deze sleutel-waarde paren. Gebruik een foreach-loop
+           * om de som van deze twee getallen als sleutel-waarde paar op het scherm te krijgen.
+           * Maak daarvoor een nieuwe functie berekenSomMetArray();
+           */
+
+           // dit array aan met nog 8 sleutel-waarde paren
+           $getallenParen = array(
+                3 => 5,
+                6 => 8,
+                5 => 2,
+                9 => 4,
+                12 => 13,
+                23 => 2,
+                45 => 6,
+                50 => 50,
+                42 => 4,
+                100 => 45
+           )
+
+           
        
 
     ?>
