@@ -114,11 +114,12 @@
         */
 
         /**
-         * Pas de functie tafel aan zodat je zelf een start- en stopwaarde kunt meegeven aan de functie
-         * dus
+         * Pas de functie tafel aan zodat je zelf een start- en stopwaarde en stapgrootte kunt meegeven aan de functie
+         * dus bij de aanroep van de functie: Gebruik de functie range() daarvoor, zie:
+         * https://www.w3schools.com/php/func_array_range.asp
          * 
          * tafel(6, 10, 12);
-         * 
+         *
          * Output
          * ======
          * 
@@ -126,11 +127,11 @@
          * 11 x 6 = 66
          * 12 x 6 = 72
          */
-        function tafel($getal)
+        function tafel($getal, $start = 1, $eind = 10, $stap = 1)
         {
             echo "<p>De tafel van $getal</p>";
             echo "***********";
-            $getallen = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+            $getallen = range($start, $eind, $stap);
 
             foreach ($getallen as $item) {
                 $product = $item * $getal;
@@ -139,12 +140,100 @@
 
         }
 
-        $test = range(3, 30);
-        var_dump($test);
-
         tafel(3);
         tafel(5);
         tafel(50);
+        tafel(6, 10, 20, 2);
+
+
+        /**
+         * Maak een functie die controleert of een automerk in een array zit
+         * De functie krijgt een array mee met 10 automerken en een automerk. Als het automerk
+         * in het array zit krijg je de melding "De auto is aanwezig". Wanneer 
+         * het automerk niet in het array zit krijg je de melding "De auto is niet aanwezig"
+         * 
+         * $autos = ['Mercedes', 'Audi']
+         * 
+         * Gebruik het voorbeeld van W3schools.com: 
+         * https://www.w3schools.com/php/func_array_in_array.asp
+         * 
+         * merkAutoAanwezig($autos, 'Volkswagen');
+         * 
+         * Output:
+         * Het merk Volkswagen is niet aanwezig.
+         */
+
+        $autos = array(
+            'BMW',
+            'Mercedes',
+            'Opel',
+            'Tesla',
+            'Lada',
+            'Ferarri',
+            'Bentley',
+            'Aston Martin',
+            'Volkswagen',
+            'Ford'
+        );
+
+        $autoMerk = 'Toyota';
+
+        function merkAutoAanwezig($autos, $autoMerk) 
+        {
+            if (in_array($autoMerk, $autos)) {
+                return "<p>Het automerk $autoMerk is aanwezig</p>";
+            } else {
+                return "<p>Het automerk $autoMerk is niet aanwezig</p>";
+            }
+        }
+
+        echo merkAutoAanwezig($autos, $autoMerk);
+
+
+        /**
+         * Maak een functie die een array kan sorteren. Oplopend of aflopend. bijvoorbeeld
+         * Laat je inspireren door: https://www.w3schools.com/php/php_ref_array.asp
+         * 
+         * $salaris = array(2300, 1200, 4000, 1380);
+         * 
+         * sorteer($salaris, 'aflopend');
+         * 
+         * output
+         * Salarissen
+         * **********
+         * 4000
+         * 2300
+         * 1380
+         * 1200
+         * 
+         * sorteer($salaris, 'oplopend');
+         * 
+         * output
+         * Salarissen
+         * **********
+         * 1200
+         * 1380
+         * 2300
+         * 4000
+         */
+
+         $salaris = array(2300, 1200, 4000, 1380);
+
+         function sorteer($salaris, $sorteervolgorde)
+         {
+            if ($sorteervolgorde == 'oplopend') {
+                $sortedArray = ksort($salaris);
+            } else if ($sorteervolgorde == 'aflopend') {
+                $sortedArray = krsort($salaris);
+            }
+            foreach ($sortedArray as $value) {
+                echo "<p>$item</p>";
+            }
+         }
+
+         sorteer($salaris, 'aflopend');
+
+
 
         
        
