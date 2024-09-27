@@ -222,16 +222,16 @@
          function sorteer($salaris, $sorteervolgorde)
          {
             if ($sorteervolgorde == 'oplopend') {
-                $sortedArray = ksort($salaris);
+                sort($salaris);
             } else if ($sorteervolgorde == 'aflopend') {
-                $sortedArray = krsort($salaris);
+                rsort($salaris);
             }
-            foreach ($sortedArray as $value) {
-                echo "<p>$item</p>";
+            foreach ($salaris as $value) {
+                echo "<p>$value</p>";
             }
          }
 
-         sorteer($salaris, 'aflopend');
+         sorteer($salaris, 'oplopend');
 
 
 
