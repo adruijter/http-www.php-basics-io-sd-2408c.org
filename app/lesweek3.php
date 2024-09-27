@@ -29,6 +29,11 @@
 
         echo "<p>De som van $getal1 + $getal2 = $som</p>";
 
+        /**
+         * Programmeurs hanteren altijd het DRY principe
+         * Don't Repeat Yourself
+         */
+
         function naamOpScherm($voornaam, $tussenvoegsel = NULL, $achternaam = NULL) 
         {
             echo "<p>Dit is mijn eerste functie en mijn naam is $voornaam $tussenvoegsel $achternaam</p>";
@@ -68,7 +73,7 @@
            * Maak een associatief array met twee getallen als sleutel waarde paar. Het array
            * heeft in totaal tien van deze sleutel-waarde paren. Gebruik een foreach-loop
            * om de som van deze twee getallen als sleutel-waarde paar op het scherm te krijgen.
-           * Maak daarvoor een nieuwe functie berekenSomMetArray();
+           * Maak daarvoor een de functie berekenSom();
            */
 
            // dit array aan met nog 8 sleutel-waarde paren
@@ -83,9 +88,33 @@
                 50 => 50,
                 42 => 4,
                 100 => 45
-           )
+           );
 
-           
+           foreach ($getallenParen as $getal1 => $getal2) {
+                echo berekenSom($getal1, $getal2);
+           }
+
+           // passend examineren
+           // Mail naar 18- studenten
+           // Vrijstellingen
+
+         /* Maak een functie die de tafel van 3 afbeeld op het scherm
+        Gebruik hiervoor een array die de getallen 1 t/m 10 als data heeft
+
+        tafel(3)
+
+        output:
+        
+        De tafel van 3
+        **************
+        1 x 3 = 3
+        2 x 3 = 6
+        enz....
+        10 x 3 = 30    
+     
+        */
+
+
        
 
     ?>
