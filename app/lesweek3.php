@@ -99,25 +99,58 @@
            // Vrijstellingen
 
          /* Maak een functie die de tafel van 3 afbeeld op het scherm
-        Gebruik hiervoor een array die de getallen 1 t/m 10 als data heeft
+            Gebruik hiervoor een array die de getallen 1 t/m 10 als data heeft
 
-        tafel(3)
+            tafel(3)
 
-        output:
-        
-        De tafel van 3
-        **************
-        1 x 3 = 3
-        2 x 3 = 6
-        enz....
-        10 x 3 = 30    
-     
+            output:
+
+            De tafel van 3
+            **************
+            1 x 3 = 3
+            2 x 3 = 6
+            enz....
+            10 x 3 = 30       
         */
 
+        /**
+         * Pas de functie tafel aan zodat je zelf een start- en stopwaarde kunt meegeven aan de functie
+         * dus
+         * 
+         * tafel(6, 10, 12);
+         * 
+         * Output
+         * ======
+         * 
+         * 10 x 6 = 60
+         * 11 x 6 = 66
+         * 12 x 6 = 72
+         */
+        function tafel($getal)
+        {
+            echo "<p>De tafel van $getal</p>";
+            echo "***********";
+            $getallen = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
+            foreach ($getallen as $item) {
+                $product = $item * $getal;
+                echo "<p>$item x $getal = $product</p>";
+            }
+
+        }
+
+        $test = range(3, 30);
+        var_dump($test);
+
+        tafel(3);
+        tafel(5);
+        tafel(50);
+
+        
        
 
     ?>
+
     
 </body>
 </html>
