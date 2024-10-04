@@ -181,13 +181,16 @@
         //  echo diplomaChecker('HAVO');
         //  echo diplomaChecker('LOI');
 
+        // Check of er op de submit knop gedrukt is
         if (isset($_POST['submit'])) {
+            // Roep de functie diplomaChecker aan met het geselecteerde schooltype
             echo diplomaChecker($_POST['schooltype']);
         }
 
 
     ?>
 
+    <!-- Dit is een html formulier -->
     <form action="lesweek4.php" method="post">
         <select name="schooltype">
             <option value="">--Geef een schooltype op--</option>
