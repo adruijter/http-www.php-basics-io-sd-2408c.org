@@ -298,9 +298,43 @@
          * fruitChecker('Appel'); //Output: De fruitsoort appel zit in het array
          * fruitChecker('Kersen'); // Output: De fruitsoort kersen is onbekend
          * 
-         * Je hebt nodig een if-else controlestructuur, in_array(), for-loop en een functie
+         * Je hebt nodig een if-else controlestructuur, in_array() en een functie
          * 
          */
+
+         function fruitChecker($fruitItem) {
+            $fruit = array('Appel', 'Banaan', 'Aardbei', 'Peer', 'Druiven');
+
+            if (in_array($fruitItem, $fruit)) {
+                return "<p>De fruitsoort $fruitItem zit in het array</p>";
+            } else {
+                return "<p>De fruitsoort $fruitItem is onbekend</p>";
+            }
+         } 
+
+         echo fruitChecker('Aardbei');
+         echo fruitChecker('Kersen');
+
+
+         /**
+          * Maak deze functie nu zelf met een for-loop
+          */
+
+         function fruitChecker_v2($fruitItem) {
+            $fruit = array('Appel', 'Banaan', 'Aardbei', 'Peer', 'Druiven');
+
+            // Gebruik een for-loop
+            for ($i = 0; $i < count($fruit); $i++) {
+                if ($fruitItem == $fruit[$i]) {
+                    return "<p>De fruitsoort $fruitItem zit in het array</p>";
+                }                
+            } 
+            return "<p>De fruitsoort $fruitItem is onbekend</p>"; 
+        }
+
+         echo fruitChecker_v2('Aardbei');
+         echo fruitChecker_v2('Kersen');
+
 
         
          
