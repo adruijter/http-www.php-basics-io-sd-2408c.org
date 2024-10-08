@@ -131,6 +131,7 @@
                     echo "<p>Het is onbekend welk deel van de dag het is</p>";
            }
 
+
         /**
          * Maak een functie diplomaChecker($opleiding) met daarin een
          * switch-case controlestructuur die aangeeft welke opleiding 
@@ -172,20 +173,30 @@
             }
          }
 
-        //  echo diplomaChecker('VWO');
-        //  echo diplomaChecker('VMBO TL');
-        //  echo diplomaChecker('VMBO Gemengd');
-        //  echo diplomaChecker('VMBO Kader');
-        //  echo diplomaChecker('VMBO Basis');
-        //  echo diplomaChecker('Praktijkonderwijs');
-        //  echo diplomaChecker('HAVO');
-        //  echo diplomaChecker('LOI');
+         echo diplomaChecker('VWO');
+         echo diplomaChecker('VMBO TL');
+         echo diplomaChecker('VMBO Gemengd');
+         echo diplomaChecker('VMBO Kader');
+         echo diplomaChecker('VMBO Basis');
+         echo diplomaChecker('Praktijkonderwijs');
+         echo diplomaChecker('HAVO');
+         echo diplomaChecker('LOI');
+
+         
 
         // Check of er op de submit knop gedrukt is
         if (isset($_POST['submit'])) {
             // Roep de functie diplomaChecker aan met het geselecteerde schooltype
             echo diplomaChecker($_POST['schooltype']);
         }
+
+
+        echo "<hr>";
+
+
+        
+
+
 
 
     ?>
