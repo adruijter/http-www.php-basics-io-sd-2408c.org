@@ -194,7 +194,56 @@
         echo "<hr>";
 
 
+        /**
+         * While - loop is een loop die een aantal malen doorlopen wordt
+         * 
+         */
+
+        $number = 0;
+        While ($number < 5) {
+           echo "<p>$number</p>";
+           $number++; 
+        }
+
+        /**
+         * Maak een indexed array met de naam groenten en zet daar
+         * 5 groentensoorten in. Geef deze groentesoorten weer op 
+         * het scherm. Gebruik daarvoor een While - loop
+         * Tip: $groenten[0] geeft de eerste groente in het array weer
+         */
+        //                     0          1            2            3             4              5
+         $groenten = array('Wortel', 'Aubergine', 'Courgette', 'Bloemkool', 'Sperciebonen', 'Aardappel', 'Pompoen');
+
+         echo "<p>$groenten[1]</p>";
+
+
+         $index = 0;
+         while ($index < count($groenten)) {
+            echo "<p>$groenten[$index]</p>";
+            $index++;
+         }
+
+         /**
+          * Herschrijf de bovenstaande code zodat Aardappel eerste wordt genoemd en als 
+          * laatste wortel. Dus geef het array weer in omgekeerde volgorde. Gebruik een 
+          * while - loop
+          * Output:
+          * Aardappel
+          * Sperciebone
+          *....
+          * Wortel
+          */
+
+         $index = 5;
+         while ($index >= 0) {
+            echo "<p>$groenten[$index]</p>";
+            $index--;
+         }
+
         
+         
+
+
 
 
 
