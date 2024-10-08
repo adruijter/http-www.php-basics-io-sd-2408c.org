@@ -211,7 +211,7 @@
          * het scherm. Gebruik daarvoor een While - loop
          * Tip: $groenten[0] geeft de eerste groente in het array weer
          */
-        //                     0          1            2            3             4              5
+        //                     0          1            2            3             4              5          6
          $groenten = array('Wortel', 'Aubergine', 'Courgette', 'Bloemkool', 'Sperciebonen', 'Aardappel', 'Pompoen');
 
          echo "<p>$groenten[1]</p>";
@@ -234,11 +234,73 @@
           * Wortel
           */
 
-         $index = 5;
+         $index = count($groenten) - 1;
          while ($index >= 0) {
             echo "<p>$groenten[$index]</p>";
             $index--;
          }
+
+
+        /**
+         * De do-While loop wordt altijd minimaal een maal uitgevoerd.
+         */
+
+        $index = 11;
+        do {
+            echo "<p>$index</p>";
+            $index++;
+        } while ($index <= 10);
+
+        /**
+         * Maak met een do-while een lijstje met het kopje
+         * Top 7 gezonde groenten
+         * **********************
+         * Het kopje moet ook verschijnen als de index buiten het bereik valt van de loop
+         */
+
+        $index = 0;
+        do {
+            if ($index == 0) {
+                echo "<p>Top 7 gezonde groenten</p>";
+                echo "*******************";
+            }
+            echo "<p>$groenten[$index]</p>";
+            $index++;
+        } while ($index < count($groenten));
+
+
+
+        /**
+         * De for-loop
+         */
+        for ($i = 0; $i < 7; $i++) {
+            echo "<p>$i</p>";
+        }
+        /**
+         * Maak een indexed array $fruit met 5 waarden en zet de waarden van het fruit 
+         * onder elkaar op het scherm.
+         * gebruik een for-loop
+         */
+        
+        $fruit = array('Appel', 'Banaan', 'Aardbei', 'Peer', 'Druiven');
+
+        for ($i = 0; $i < count($fruit);$i++) {
+            echo "<p>$fruit[$i]</p>";
+        }
+
+        /**
+         * Maak een functie die checked of een fruitsoort in het 
+         * array zit en de zin teruggeeft dat het fruitsoort in het
+         * array zit. Als het fruitsoort er niet in zit dan krijg
+         * je de melding: Fruitsoort is onbekend
+         * 
+         * Voorbeelden
+         * fruitChecker('Appel'); //Output: De fruitsoort appel zit in het array
+         * fruitChecker('Kersen'); // Output: De fruitsoort kersen is onbekend
+         * 
+         * Je hebt nodig een if-else controlestructuur, in_array(), for-loop en een functie
+         * 
+         */
 
         
          
