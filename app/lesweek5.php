@@ -147,8 +147,15 @@
      evenOfOneven(3);
 
      /**
-      * Maak een functie kilometerVergoeding($aantalKilometers) die de vergoeding bereken
-      * wat je krijgt voor het aantal 
+      * Maak een functie kilometerVergoeding($aantalKilometers) die de vergoeding berekent
+      * voor het aantal gereden kilometers.
+      * Voor de eerste 10 km krijg je 0.3 euro per km.
+      * Tussen de 10 km en 30 km krijg je 0.5 euro per km.
+      * Boven de 30 km krijg je 0.8 euro per km.
+      * 
+      * Voorbeeld:
+      * kilometerVergoeding(50);
+      * Output: U krijgt 29 euro reiskostenvergoeding voor 50km
       */
 
    ?>
