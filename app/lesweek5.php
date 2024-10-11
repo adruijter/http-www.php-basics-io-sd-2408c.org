@@ -94,7 +94,49 @@
             echo "<p>Het getal $getal is groter of gelijk aan 10</p>";
         }
 
+        if ($getal != 5) {
+            echo "<p>Het getal $getal is niet gelijk aan 5</p>";
+        } else {
+            echo "<p>Het getal $getal is gelijk aan 5</p>";
+        }
     ?>
+
+    <h5>De AND (&&) operator (Beide beweringen moeten waar zijn)</h5>
+
+    <?php
+        $getal = 100;
+        if ($getal > 5 && $getal < 15) {
+            echo "<p>Het getal $getal is groter dan 5 en kleiner dan 15</p>";
+        } else {
+            echo "<p>Het getal $getal is kleiner of gelijk aan 5 of groter of gelijk aan 15</p>";
+        }
+    ?>
+
+   <h5>De OR (||) operator (Een van de beweringen moet waar zijn)</h5>
+   
+   <?php
+    $inkomen =  301000;
+    $heeftRijkeOom = false;
+
+    if ($inkomen > 300000 || $heeftRijkeOom == true) {
+        echo "<p>U kunt bij ons een Ferrari kopen</p>";
+    } else {
+        echo "<p>Uw inkomen is te laag of u heeft geen rijke oom, u mag geen Ferrari kopen</p>";
+    }
+
+    /**
+     * Maak een functie die kan checken of een getal even of oneven is
+     * Voorbeeld:
+     * 
+     * evenOfOneven(202); //Output: Het getal 202 is een even getal
+     * 
+     */
+
+     
+
+   ?>
+
+
 
 </body>
 </html>
