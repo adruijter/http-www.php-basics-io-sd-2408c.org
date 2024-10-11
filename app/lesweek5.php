@@ -132,7 +132,24 @@
      * 
      */
 
-     
+     function evenOfOneven($getal)
+     {
+        if ($getal % 2) {
+            echo "<p>Het getal $getal is oneven</p>";
+        } else {
+            echo "<p>Het getal $getal is even</p>";
+        } 
+     } 
+
+     evenOfOneven(202);
+     evenOfOneven(1);
+     evenOfOneven(2);
+     evenOfOneven(3);
+
+     /**
+      * Maak een functie kilometerVergoeding($aantalKilometers) die de vergoeding bereken
+      * wat je krijgt voor het aantal 
+      */
 
    ?>
 
