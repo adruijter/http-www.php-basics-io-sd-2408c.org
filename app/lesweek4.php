@@ -335,12 +335,19 @@
          echo fruitChecker_v2('Aardbei');
          echo fruitChecker_v2('Kersen');
 
-
         
-         
+        /**
+         * Met foreach kun je makkelijke een associatief array uitlezen
+         */
+        $cijfers = array(
+            'Nederlands' => 6.7,
+            'Engels' => 8.3,
+            'Rekenen' => 9.2
+        );
 
-
-
+        foreach ($cijfers as $vak => $cijfer) {
+            echo "<p>Vak: $vak => Cijfer: $cijfer</p>";
+        }
 
 
 
