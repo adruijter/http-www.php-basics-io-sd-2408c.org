@@ -158,6 +158,25 @@
       * Output: U krijgt 29 euro reiskostenvergoeding voor 50km
       */
 
+      function kilometerVergoeding($kilometers)
+      {
+        $vergoeding = 0;
+        if ($kilometers <= 10) {
+            $vergoeding += $kilometers * 0.3;
+        } elseif ($kilometers > 10 && $kilometers <= 30) {
+            $vergoeding = 3 + ($kilometers - 10) * 0.5;
+        } else {
+            $vergoeding = 3 + 10 + ($kilometers - 30) * 0.8;
+        }
+        echo "<p>U krijgt $vergoeding euro voor $kilometers km</>";
+      }
+
+      kilometerVergoeding(50);
+      kilometerVergoeding(5);
+      kilometerVergoeding(20);
+      kilometerVergoeding(50);
+
+
    ?>
 
 
