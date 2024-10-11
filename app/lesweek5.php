@@ -168,13 +168,13 @@
         } else {
             $vergoeding = 3 + 10 + ($kilometers - 30) * 0.8;
         }
-        echo "<p>U krijgt $vergoeding euro voor $kilometers km</>";
+        return "<p>U krijgt $vergoeding euro voor $kilometers km</p>";
       }
 
-      kilometerVergoeding(50);
-      kilometerVergoeding(5);
-      kilometerVergoeding(20);
-      kilometerVergoeding(50);
+      echo kilometerVergoeding(50);
+      echo kilometerVergoeding(5);
+      echo kilometerVergoeding(20);
+      echo kilometerVergoeding(50);
 
 
    ?>
