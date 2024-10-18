@@ -105,8 +105,81 @@
     echo rekenen(10, 3.3, '+');
     echo rekenen(-1, 5, '+');
     echo rekenen(1, -5, '+');
+    ?>
+
+    <h5>Vraag 5</h5>
+    <hr>
+
+    <?php
+        function tafelVan($getal, $startGetal = 1, $eindGetal = 10)
+        {
+            if ( $startGetal < $eindGetal) {
+                $index = $startGetal;
+                while ($index <= $eindGetal) {
+                    $product = $index * $getal;
+                    echo "<p>$index x $getal = $product</p>";
+                    $index++;
+                }
+            } else {
+                echo "Het startgetal is groter dan het eindgetal, dit kan niet";
+            }
+        }
+
+        echo tafelVan(5, 5, 15);
+        echo tafelVan(9);
+        echo tafelVan(9, 100, 10);
+        echo tafelVan(4, 30, 33);
+
+    ?>
+
+    <h5>Vraag 6</h5>
+    <hr>
+
+    <?php
+         function asciiArt() 
+         {
+             for ($i = 0; $i < 9; $i++) {
+                 if ($i < 4) {
+                     echo str_repeat("&nbsp;", $i) . "x" . str_repeat("&nbsp;", 7 - 2 * $i) . "x<br>";
+                 }
+                 if ($i == 5) {
+                     echo str_repeat("&nbsp;", $i - 1) . "x<br>";
+                 }
+                 if ($i > 5) {
+                     echo str_repeat("&nbsp;", 9 - $i) . "x" . str_repeat("&nbsp;", 2 * $i - 11) . "x<br>";
+                 }
+             }
+         }
+ 
+         asciiArt();
+    ?>
+
+    <h5>Vraag 7</h5>
+    <hr>
+
+    <?php
+
+    function rechthoek($lengte, $breedte)
+    {
+        if ($lengte < $breedte) {
+            return "<p>De lengte $lengte is kleiner dan de breedte $breedte, graag aanpassen!</p>";
+        } elseif (!is_int($lengte) || !is_int($breedte)) {
+            return "<p>$lengte of $breedte is geen geheel getal of ze zijn het beiden niet, graag aanpassen!</p>";
+        } elseif ($lengte < 0 || $breedte < 0) {
+            return "<p>$lengte of $breedte is kleiner dan nul, graag aanpassen</p>";
+        }
+        $oppervlakte = $lengte * $breedte;
+        return "<p>De oppervlakte van een rechthoek van $lengte x $breedte = $oppervlakte</p>";
+    }
+
+    echo rechthoek(5, 4);
+    echo rechthoek(3, 4);
+    echo rechthoek(6.5, 4.2);
+    echo rechthoek(-3, -8);
 
 
     ?>
+
+    
 </body>
 </html>
