@@ -176,8 +176,29 @@
     echo rechthoek(3, 4);
     echo rechthoek(6.5, 4.2);
     echo rechthoek(-3, -8);
+    echo rechthoek(3, 4.2);
 
 
+    
+
+    ?>
+
+    <h5>Vraag 8</h5>
+    <hr>
+
+    <?php
+    function optellen($getal1, $getal2) {
+        if (!is_numeric($getal1) || !is_numeric($getal2)) {
+            return "<p>Voer alstublieft geldige getallen in.</p>";
+        }
+        $som = $getal1 + $getal2;
+        return "<p>De som van $getal1 + $getal2 = $som</p>";
+    }
+
+    // Voorbeelden van gebruik
+    echo optellen(5, 3);
+    echo optellen(10, 20);
+    echo optellen("abc", 5); // Geeft foutmelding
     ?>
 
     
